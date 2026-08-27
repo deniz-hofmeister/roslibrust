@@ -1525,6 +1525,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "hashbrown"
+version = "0.17.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
+dependencies = [
+ "allocator-api2",
+ "equivalent",
+ "foldhash 0.2.0",
+]
+
+[[package]]
 name = "heck"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3673,7 +3684,6 @@ dependencies = [
 name = "roslibrust_transforms"
 version = "0.1.0"
 dependencies = [
- "chrono",
  "diffy",
  "env_logger 0.11.8",
  "log",
@@ -5025,12 +5035,14 @@ dependencies = [
 
 [[package]]
 name = "transforms"
-version = "1.2.0"
+version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f6319e43042a9870592131406e2018fb88bb8114b282b98f99bb7f5922f03386"
+checksum = "e5eaf21707966bfcbfbb0e31bfd2ba076179dadf87c7c623893320377980976c"
 dependencies = [
  "approx",
- "hashbrown 0.16.1",
+ "hashbrown 0.17.1",
+ "libm",
+ "serde",
  "thiserror 2.0.18",
 ]
 
@@ -5455,7 +5467,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.48.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
